@@ -50,7 +50,6 @@ export default class Album extends Component {
             <MusicCard music={ music } />
           </div>
         ))}
-        {/* <MusicCard musicList={ musicList } /> */}
       </div>
     );
   }
