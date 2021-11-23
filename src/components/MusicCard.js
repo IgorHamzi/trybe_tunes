@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Load from './Load';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, getFavoriteSongs } from '../services/favoriteSongsAPI';
 
 export default class MusicCard extends Component {
   constructor() {
@@ -12,7 +12,11 @@ export default class MusicCard extends Component {
     };
 
     this.onInputChange = this.onInputChange.bind(this);
-    // this.favoriteSave = this.favoriteSave.bind(this);
+    this.favoritesSong = this.favoritesSong.bind(this);
+  }
+
+  componentDidMount() {
+    this.favoritesSong();
   }
 
   async onInputChange() {
@@ -22,12 +26,12 @@ export default class MusicCard extends Component {
     this.setState({ loading: false });
   }
 
-  // async favoriteSave(music) {
-  //   console.log(music);
-  //   this.setState({ loading: true });
-  //   await addSong(music);
-  //   this.setState({ loading: false });
-  // }
+  async favoritesSong() {
+    const { music: { trackId } } = this.props;
+    const favoriteMusic = await getFavoriteSongs();
+    favoriteMusic.some((song) => song.trackId === trackId
+      && this.setState({ check: true }));
+  }
 
   render() {
     const {
@@ -62,36 +66,6 @@ export default class MusicCard extends Component {
             />
           </label>
         )}
-        {/* {musicList.slice([1]).map((music) => (
-          <>
-            <h4 key={ music.artistId }>{music.trackName}</h4>
-            <audio
-              data-testid="audio-component"
-              src={ music.previewUrl }
-              controls
-            >
-              <track kind="captions" />
-              O seu navegador não suporta o elemento
-              <code>audio</code>
-            </audio>
-            {loading ? <Load /> : (
-              <label htmlFor="favoriteMusic">
-                Favorita
-                <input
-                  data-testid={ `checkbox-music-${music.trackId}` }
-                  // value={ check }
-                  id={ music.trackId }
-                  // name="check"
-                  type="checkbox"
-                  checked={ check }
-                  onChange={ () => onInputChange(music) }
-                // defaultChecked={}
-                />
-              </label>
-            )}
-          </>
-        ))}
-        {loading && <Load />} */}
       </div>
     );
   }
