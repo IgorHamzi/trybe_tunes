@@ -32,6 +32,7 @@ export default class Login extends Component {
     const {
       userName,
     } = this.state;
+
     const number = 3;
     if (userName.length < number) {
       this.setState({ buttonDisabled: true });
@@ -46,11 +47,6 @@ export default class Login extends Component {
     await createUser({ name: userName });
     this.setState({ loading: false });
     this.setState({ requisition: true });
-    // if (load) {
-    //   return this.setState({ loading: true, requisition: false }, () => {
-    //     this.setState({ requisition: true });
-    // //   });
-    // }
   }
 
   render() {

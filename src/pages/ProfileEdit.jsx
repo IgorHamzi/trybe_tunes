@@ -6,7 +6,6 @@ export default class ProfileEdit extends Component {
     return (
       <div data-testid="page-profile-edit">
         <Header />
-        oi
       </div>
     );
   }

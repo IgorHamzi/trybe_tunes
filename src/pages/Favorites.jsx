@@ -6,7 +6,6 @@ export default class Favorites extends Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        oi
       </div>
     );
   }

@@ -20,9 +20,9 @@ export default class MusicCard extends Component {
   }
 
   async onInputChange() {
-    const { music: { trackId } } = this.props;
+    const { music } = this.props;
     this.setState({ loading: true, check: true });
-    await addSong(trackId);
+    await addSong(music);
     this.setState({ loading: false });
   }
 

@@ -79,7 +79,6 @@ export default class Login extends Component {
               <img src={ artworkUrl100 } alt={ collectionName } />
               <p>{artistName}</p>
               <p>{collectionName}</p>
-              Album
             </Link>
           </div>
         ))}

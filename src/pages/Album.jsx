@@ -22,7 +22,6 @@ export default class Album extends Component {
   async getMusicApi() {
     const { match: { params: { id } } } = this.props;
     const musics = await getMusics(id);
-    console.log(musics);
     this.setState({
       musicList: musics,
       artistName: musics[0].artistName,
