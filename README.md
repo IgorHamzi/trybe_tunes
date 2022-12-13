@@ -1,13 +1,28 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+## :information_source: Tryunfo
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Nesse projeto foi criado uma aplicação para pesquisar e listar álbuns e músicas de várias bandas e artistas. Será possível até mesmo ouvir o preview de cada música. Além disso, você também poderá favoritar suas músicas preferidas. Tudo isso será dividido em várias rotas, cada uma responsável por uma parte da funcionalidade.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+
+## :rocket: Stack utilizada
+
+* Front-end: React
+
+---
+
+## Habilidades desenvolvidas
+
+Utilizar o componentDidMount para executar uma ação após o componente ser inserido no DOM; Utilizar o shouldComponentUpdate para avaliar se uma atualização do componente deve ou não acontecer naquele momento; Utilizar o componentDidUpdate para executar uma ação após o componente ser atualizado; Utilizar o componentWillUnmount para realizar uma ação antes de o componente ser desmontado. Utilizar o props.children para acessar os filhos de um componente React e interagir com eles; Utilizar o componente BrowserRouter corretamente; Criar links de navegação na aplicação com o componente Link ; Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route ; Estruturar e organizar as rotas da sua aplicação com o componente Switch ; Usar o componente Redirect pra alternar entre rotas.
+
+---
+
+## :link: O que foi desenvolvido
+
+Neste projeto foi desenvolvido um app de pesquisas de músicas! Ao utilizar essa aplicação uma pessoa usuária deverá ser capaz de:
+
+* Pesquisar um artista ou banda;
+* Escolher um álbum do artista/banda pesquisado;
+* Ouvir uma prévia de 30segundos de cada música do albúm escolhido;
+* Favoritar e salvar as músicas desejadas;
+
+
+### Projeto realizado no módulo de Front-end do Curso de Desenvolvimento WEB da TRYBE.
