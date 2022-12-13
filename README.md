@@ -1,4 +1,4 @@
-## :information_source: Tryunfo
+## :information_source: Trybe Tunes
 
 Nesse projeto foi criado uma aplicação para pesquisar e listar álbuns e músicas de várias bandas e artistas. Será possível até mesmo ouvir o preview de cada música. Além disso, você também poderá favoritar suas músicas preferidas. Tudo isso será dividido em várias rotas, cada uma responsável por uma parte da funcionalidade.
 
